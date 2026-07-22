@@ -1,0 +1,9 @@
+photo_id,image_path,zone,photo_number,gt_length_cm,gt_width_cm,gt_thickness_cm
+ZoneA_001,datasets/seaweed/images/ZoneA_001.jpg,ZoneA,1,22.5,14.0,4.5
+ZoneA_002,datasets/seaweed/images/ZoneA_002.jpg,ZoneA,2,22.5,14.0,4.5
+ZoneA_003,datasets/seaweed/images/ZoneA_003.jpg,ZoneA,3,22.5,14.0,4.5
+ZoneA_004,datasets/seaweed/images/ZoneA_004.jpg,ZoneA,4,22.5,14.0,4.5
+ZoneA_005,datasets/seaweed/images/ZoneA_005.jpg,ZoneA,5,22.5,14.0,4.5
+ZoneA_006,datasets/seaweed/images/ZoneA_006.jpg,ZoneA,6,22.5,14.0,4.5
+ZoneA_007,datasets/seaweed/images/ZoneA_007.jpg,ZoneA,7,19.0,12.5,3.8
+ZoneA_008,datasets/seaweed/images/ZoneA_008.jpg,ZoneA,8,19.0,12.5,3.8

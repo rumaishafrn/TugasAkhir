@@ -1,0 +1,27 @@
+# Pipeline Estimasi Volumetrik Objek dari Kamera RGB
+# Diuji pada Python 3.10 - 3.12
+
+# --- Inti: deep learning ---
+torch>=2.0.0
+torchvision>=0.15.0
+
+# --- Instance segmentation ---
+ultralytics>=8.3.0
+
+# --- Monocular depth estimation ---
+transformers>=4.41.0
+accelerate>=0.30.0
+timm>=0.9.0
+
+# --- Pemrosesan citra dan numerik ---
+opencv-python>=4.8.0
+numpy>=1.24.0,<2.0.0
+scipy>=1.11.0
+Pillow>=10.0.0
+
+# --- Analisis dan visualisasi ---
+pandas>=2.0.0
+matplotlib>=3.7.0
+
+# --- Uji ---
+pytest>=7.4.0

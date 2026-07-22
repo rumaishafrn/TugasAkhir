@@ -1,0 +1,9 @@
+# Dependensi opsional.
+#
+# Open3D dipakai pada penelitian asli untuk Statistical Outlier Removal.
+# Repositori ini menyertakan implementasi pengganti berbasis scipy.cKDTree
+# yang menghasilkan nilai setara, sehingga Open3D TIDAK wajib dipasang.
+# Pasang berkas ini hanya bila hendak melakukan visualisasi point cloud
+# secara interaktif atau mereproduksi hasil dengan pustaka yang identik.
+
+open3d>=0.18.0

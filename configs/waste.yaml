@@ -1,0 +1,52 @@
+# Konfigurasi studi kasus sampah terapung (metode convex hull)
+# Nilai bersumber dari Bab III buku Tugas Akhir.
+
+case_study: waste
+
+segmentation:
+  model: yolov8s-seg          # terbaik, mask mAP@50-95 = 0.926
+  weights: weights/yolov8s-seg-waste.pt
+  conf_threshold: 0.50
+  imgsz: 640
+  classes:
+    - bottle cap
+    - can
+    - cardboard
+    - plastic bottle
+    - plastic container
+    - plastic lid
+
+depth:
+  model: zoedepth-kitti       # terbaik, akurasi 97.08% (MAPE 2.92%)
+  hf_id: Intel/zoedepth-kitti
+  depth_type: metric
+
+camera:
+  # Diturunkan dari FOV diagonal 60 derajat webcam Logitech C310 @ 1280x720
+  fx: 1272.0
+  fy: 1272.0
+  cx: 640.0
+  cy: 360.0
+  width: 1280
+  height: 720
+
+distance_calibration:
+  # D = a / s + b, dengan s = w_obb + h_obb (piksel)
+  a: 47410.0
+  b: 16.159
+  reference_object: Botol plastik 600 ml (6.4 x 23.3 cm)
+
+pointcloud:
+  sor_nb_neighbors: 20
+  sor_std_ratio: 1.5
+
+volume:
+  method: convex_hull
+  correction_factor: 1.58     # V_terkoreksi = V_hull / 1.58
+
+tracking:
+  method: hungarian_iou
+  iou_threshold: 0.3
+  max_frames_missing: 10
+  trimmed_mean_window: 5
+  trimmed_proportion: 0.2

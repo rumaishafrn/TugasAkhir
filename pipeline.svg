@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 990" width="960" height="990" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+
+  <!-- Latar putih eksplisit agar tetap terbaca pada mode gelap GitHub -->
+  <rect width="960" height="990" fill="#ffffff"/>
+
+  <!-- ============================ MASUKAN ============================ -->
+  <rect x="350" y="24" width="260" height="44" rx="6" fill="#f1f5f9" stroke="#475569" stroke-width="1.5"/>
+  <text x="480" y="52" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">Citra / Video RGB tunggal</text>
+
+  <!-- percabangan ke dua tahap bersama -->
+  <line x1="480" y1="68" x2="480" y2="88" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="88" x2="710" y2="88" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="88" x2="250" y2="103" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 245 103 L 255 103 L 250 110 Z" fill="#94a3b8"/>
+  <line x1="710" y1="88" x2="710" y2="103" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 705 103 L 715 103 L 710 110 Z" fill="#94a3b8"/>
+
+  <!-- ======================= TAHAP BERSAMA ======================= -->
+  <rect x="100" y="110" width="300" height="62" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="250" y="136" text-anchor="middle" font-size="13.5" font-weight="600" fill="#0f172a">YOLO Instance Segmentation</text>
+  <text x="250" y="156" text-anchor="middle" font-size="11.5" fill="#475569">mask biner per objek pada tingkat piksel</text>
+
+  <rect x="560" y="110" width="300" height="62" rx="6" fill="#f8fafc" stroke="#475569" stroke-width="1.5"/>
+  <text x="710" y="136" text-anchor="middle" font-size="13.5" font-weight="600" fill="#0f172a">Monocular Depth Estimation</text>
+  <text x="710" y="156" text-anchor="middle" font-size="11.5" fill="#475569">peta kedalaman padat per piksel</text>
+
+  <!-- penggabungan kembali -->
+  <line x1="250" y1="172" x2="250" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="710" y1="172" x2="710" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="196" x2="710" y2="196" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="480" y1="196" x2="480" y2="203" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 475 203 L 485 203 L 480 210 Z" fill="#94a3b8"/>
+
+  <!-- simpul percabangan -->
+  <rect x="280" y="210" width="400" height="34" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="480" y="232" text-anchor="middle" font-size="12" fill="#475569">Percabangan menurut cara memperoleh ketiga dimensi objek</text>
+
+  <line x1="480" y1="244" x2="480" y2="262" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="262" x2="710" y2="262" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="262" x2="250" y2="277" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 245 277 L 255 277 L 250 284 Z" fill="#94a3b8"/>
+  <line x1="710" y1="262" x2="710" y2="277" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 705 277 L 715 277 L 710 284 Z" fill="#94a3b8"/>
+
+  <!-- ===================== KEPALA KOLOM ===================== -->
+  <rect x="40" y="284" width="420" height="46" rx="6" fill="#0369a1"/>
+  <text x="250" y="305" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">JALUR A — SAMPAH TERAPUNG</text>
+  <text x="250" y="322" text-anchor="middle" font-size="11" fill="#bae6fd">objek reguler · rekonstruksi point cloud · convex hull</text>
+
+  <rect x="500" y="284" width="420" height="46" rx="6" fill="#15803d"/>
+  <text x="710" y="305" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">JALUR B — SAMPEL RUMPUT LAUT</text>
+  <text x="710" y="322" text-anchor="middle" font-size="11" fill="#bbf7d0">objek ireguler · kotak pembatas 3D · metode PLT</text>
+
+  <line x1="250" y1="330" x2="250" y2="341" stroke="#0369a1" stroke-width="2"/>
+  <path d="M 245 341 L 255 341 L 250 348 Z" fill="#0369a1"/>
+  <line x1="710" y1="330" x2="710" y2="341" stroke="#15803d" stroke-width="2"/>
+  <path d="M 705 341 L 715 341 L 710 348 Z" fill="#15803d"/>
+
+  <!-- ===================== JALUR A: LANGKAH ===================== -->
+  <g>
+    <rect x="40" y="348" width="420" height="56" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <circle cx="66" cy="376" r="12" fill="#0369a1"/>
+    <text x="66" y="380" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">1</text>
+    <text x="88" y="371" font-size="13" font-weight="600" fill="#0f172a">Estimasi jarak kamera-objek</text>
+    <text x="88" y="390" font-size="11.5" fill="#0c4a6e">D = 47410 / s + 16,159 · s = w + h · [Pers. 3.2]</text>
+  </g>
+  <line x1="250" y1="404" x2="250" y2="417" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M 245 417 L 255 417 L 250 424 Z" fill="#7dd3fc"/>
+
+  <g>
+    <rect x="40" y="424" width="420" height="56" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <circle cx="66" cy="452" r="12" fill="#0369a1"/>
+    <text x="66" y="456" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">2</text>
+    <text x="88" y="447" font-size="13" font-weight="600" fill="#0f172a">Penskalaan peta kedalaman metrik</text>
+    <text x="88" y="466" font-size="11.5" fill="#0c4a6e">k = D / rata-rata d_rel · [Pers. 3.4-3.6]</text>
+  </g>
+  <line x1="250" y1="480" x2="250" y2="493" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M 245 493 L 255 493 L 250 500 Z" fill="#7dd3fc"/>
+
+  <g>
+    <rect x="40" y="500" width="420" height="56" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <circle cx="66" cy="528" r="12" fill="#0369a1"/>
+    <text x="66" y="532" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">3</text>
+    <text x="88" y="523" font-size="13" font-weight="600" fill="#0f172a">Proyeksi balik ke ruang tiga dimensi</text>
+    <text x="88" y="542" font-size="11.5" fill="#0c4a6e">X = (u - cx)·Z / fx · fx = fy = 1272 px · [Pers. 3.7]</text>
+  </g>
+  <line x1="250" y1="556" x2="250" y2="569" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M 245 569 L 255 569 L 250 576 Z" fill="#7dd3fc"/>
+
+  <g>
+    <rect x="40" y="576" width="420" height="56" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <circle cx="66" cy="604" r="12" fill="#0369a1"/>
+    <text x="66" y="608" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">4</text>
+    <text x="88" y="599" font-size="13" font-weight="600" fill="#0f172a">Pembersihan pencilan (SOR)</text>
+    <text x="88" y="618" font-size="11.5" fill="#0c4a6e">k = 20 tetangga · α = 1,5 · [Pers. 3.8]</text>
+  </g>
+  <line x1="250" y1="632" x2="250" y2="645" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M 245 645 L 255 645 L 250 652 Z" fill="#7dd3fc"/>
+
+  <g>
+    <rect x="40" y="652" width="420" height="56" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <circle cx="66" cy="680" r="12" fill="#0369a1"/>
+    <text x="66" y="684" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">5</text>
+    <text x="88" y="675" font-size="13" font-weight="600" fill="#0f172a">Volume convex hull dan koreksi</text>
+    <text x="88" y="694" font-size="11.5" fill="#0c4a6e">V = V_hull / 1,58 · [Pers. 3.9-3.10]</text>
+  </g>
+  <line x1="250" y1="708" x2="250" y2="721" stroke="#7dd3fc" stroke-width="2"/>
+  <path d="M 245 721 L 255 721 L 250 728 Z" fill="#7dd3fc"/>
+
+  <g>
+    <rect x="40" y="728" width="420" height="56" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="1.5"/>
+    <circle cx="66" cy="756" r="12" fill="#0369a1"/>
+    <text x="66" y="760" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">6</text>
+    <text x="88" y="751" font-size="13" font-weight="600" fill="#0f172a">Konsistensi antar-frame</text>
+    <text x="88" y="770" font-size="11.5" fill="#0c4a6e">Hungarian + IoU · trimmed mean (jendela 5)</text>
+  </g>
+
+  <!-- ===================== JALUR B: LANGKAH ===================== -->
+  <g>
+    <rect x="500" y="348" width="420" height="56" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+    <circle cx="526" cy="376" r="12" fill="#15803d"/>
+    <text x="526" y="380" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">1</text>
+    <text x="548" y="371" font-size="13" font-weight="600" fill="#0f172a">Kalibrasi panjang fokus per zona</text>
+    <text x="548" y="390" font-size="11.5" fill="#14532d">f_px = median per zona · [Pers. 3.12-3.13]</text>
+  </g>
+  <line x1="710" y1="404" x2="710" y2="417" stroke="#86efac" stroke-width="2"/>
+  <path d="M 705 417 L 715 417 L 710 424 Z" fill="#86efac"/>
+
+  <g>
+    <rect x="500" y="424" width="420" height="56" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+    <circle cx="526" cy="452" r="12" fill="#15803d"/>
+    <text x="526" y="456" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">2</text>
+    <text x="548" y="447" font-size="13" font-weight="600" fill="#0f172a">Dimensi tampak dari mask</text>
+    <text x="548" y="466" font-size="11.5" fill="#14532d">P &amp; L via minAreaRect, konversi ke cm · [Pers. 3.11]</text>
+  </g>
+  <line x1="710" y1="480" x2="710" y2="493" stroke="#86efac" stroke-width="2"/>
+  <path d="M 705 493 L 715 493 L 710 500 Z" fill="#86efac"/>
+
+  <g>
+    <rect x="500" y="500" width="420" height="56" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+    <circle cx="526" cy="528" r="12" fill="#15803d"/>
+    <text x="526" y="532" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">3</text>
+    <text x="548" y="523" font-size="13" font-weight="600" fill="#0f172a">Rentang kedalaman (persentil)</text>
+    <text x="548" y="542" font-size="11.5" fill="#14532d">s = P95(d_rel) - P5(d_rel) · [Pers. 3.14]</text>
+  </g>
+  <line x1="710" y1="556" x2="710" y2="569" stroke="#86efac" stroke-width="2"/>
+  <path d="M 705 569 L 715 569 L 710 576 Z" fill="#86efac"/>
+
+  <g>
+    <rect x="500" y="576" width="420" height="56" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+    <circle cx="526" cy="604" r="12" fill="#15803d"/>
+    <text x="526" y="608" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">4</text>
+    <text x="548" y="599" font-size="13" font-weight="600" fill="#0f172a">Faktor skala ketebalan per grup</text>
+    <text x="548" y="618" font-size="11.5" fill="#14532d">T = s × sz_grup · 1 grup = 6 foto · [Pers. 3.15-3.16]</text>
+  </g>
+  <line x1="710" y1="632" x2="710" y2="645" stroke="#86efac" stroke-width="2"/>
+  <path d="M 705 645 L 715 645 L 710 652 Z" fill="#86efac"/>
+
+  <g>
+    <rect x="500" y="652" width="420" height="56" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="1.5"/>
+    <circle cx="526" cy="680" r="12" fill="#15803d"/>
+    <text x="526" y="684" text-anchor="middle" font-size="11.5" font-weight="700" fill="#ffffff">5</text>
+    <text x="548" y="675" font-size="13" font-weight="600" fill="#0f172a">Volume metode PLT</text>
+    <text x="548" y="694" font-size="11.5" fill="#14532d">V = P × L × T · [Pers. 3.17]</text>
+  </g>
+
+  <!-- ===================== KONVERGENSI ===================== -->
+  <line x1="250" y1="784" x2="250" y2="814" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="710" y1="708" x2="710" y2="814" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="814" x2="710" y2="814" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="480" y1="814" x2="480" y2="833" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 475 833 L 485 833 L 480 840 Z" fill="#94a3b8"/>
+
+  <rect x="300" y="840" width="360" height="52" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+  <text x="480" y="864" text-anchor="middle" font-size="13.5" font-weight="700" fill="#0f172a">Evaluasi terhadap volume ground truth</text>
+  <text x="480" y="882" text-anchor="middle" font-size="11" fill="#78350f">MAE · MAPE · Akurasi = 100% - MAPE · [Pers. 3.20-3.22]</text>
+
+  <!-- ===================== HASIL AKHIR ===================== -->
+  <line x1="480" y1="892" x2="480" y2="908" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="908" x2="710" y2="908" stroke="#94a3b8" stroke-width="2"/>
+  <line x1="250" y1="908" x2="250" y2="917" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 245 917 L 255 917 L 250 924 Z" fill="#94a3b8"/>
+  <line x1="710" y1="908" x2="710" y2="917" stroke="#94a3b8" stroke-width="2"/>
+  <path d="M 705 917 L 715 917 L 710 924 Z" fill="#94a3b8"/>
+
+  <rect x="40" y="924" width="420" height="46" rx="6" fill="#e0f2fe" stroke="#0369a1" stroke-width="2"/>
+  <text x="250" y="945" text-anchor="middle" font-size="13" font-weight="700" fill="#0c4a6e">ZoeDepth-KITTI — akurasi 97,08%</text>
+  <text x="250" y="962" text-anchor="middle" font-size="10.5" fill="#075985">MAPE 2,92% · YOLOv8s-seg (mask mAP@50-95 = 0,926)</text>
+
+  <rect x="500" y="924" width="420" height="46" rx="6" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+  <text x="710" y="945" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">Depth-Anything V2 Large — akurasi 96,95%</text>
+  <text x="710" y="962" text-anchor="middle" font-size="10.5" fill="#166534">MAPE 3,05% · YOLOv11s-seg (mask mAP@50-95 = 0,8786)</text>
+
+</svg>

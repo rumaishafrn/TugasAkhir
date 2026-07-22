@@ -1,0 +1,48 @@
+# Konfigurasi studi kasus sampel rumput laut (metode PLT)
+# Nilai bersumber dari Bab III buku Tugas Akhir.
+
+case_study: seaweed
+
+segmentation:
+  model: yolo11s-seg          # terbaik, mask mAP@50-95 = 0.8786
+  weights: weights/yolo11s-seg-seaweed.pt
+  conf_threshold: 0.25
+  imgsz: 640
+  classes:
+    - seaweed
+
+depth:
+  model: dav2-large           # terbaik, akurasi 96.95% (MAPE 3.05%)
+  hf_id: depth-anything/Depth-Anything-V2-Large-hf
+  depth_type: relative
+
+acquisition:
+  photos_per_group: 6
+  # Pemetaan posisi foto dalam grup terhadap jarak kamera (Tabel 3.2)
+  photo_distance_map:
+    1: 30
+    2: 30
+    3: 40
+    4: 40
+    5: 50
+    6: 50
+  zones:
+    ZoneA:
+      location: Takalar, Sulawesi Selatan
+      camera: Poco M4 Pro 4G
+      n_photos: 186
+    ZoneB:
+      location: Mamuju, Sulawesi Barat
+      camera: Samsung Galaxy A53 5G
+      n_photos: 180
+
+calibration:
+  # Panjang fokus dikalibrasi per zona sebagai median (Persamaan 3.13)
+  focal_aggregation: median
+  # Faktor skala ketebalan dikalibrasi per grup sebagai median (Persamaan 3.15)
+  thickness_scale_aggregation: median
+  depth_percentile_high: 95
+  depth_percentile_low: 5
+
+volume:
+  method: lwh                 # Panjang x Lebar x Tinggi
